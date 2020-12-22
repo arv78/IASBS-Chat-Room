@@ -24,7 +24,7 @@ if(isset($_POST['uiSubmit']))
         $u->setPassword($_POST['uiPass']);
         $u->setTelephone($_POST['uiPhone']);
         if($u->Save())
-            $Message = 'You have successfully registed.';
+            $Message = 'You have successfully registered.';
         else
             $Message = 'The username already exists. Please use a different username.';
     }
