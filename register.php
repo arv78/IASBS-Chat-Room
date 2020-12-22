@@ -10,8 +10,8 @@ $uiUsername_cv = "";
 
 if(isset($_POST['uiSubmit']))
 {
-    $uiName_cv = $_POST['uiFname'];
-    $uiFamily_cv = $_POST['uiLname'];
+    $uiFname_cv = $_POST['uiFname'];
+    $uiLname_cv = $_POST['uiLname'];
     $uiUsername_cv = $_POST['uiUsername'];
     $uiPhone_cv = $_POST['uiPhone'];
 
