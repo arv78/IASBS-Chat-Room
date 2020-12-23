@@ -2,14 +2,15 @@
 require "config/config.php";
 require "model/user.php";
 
-$Message = '';
-$uiFname_cv = "";
-$uiLname_cv = "";
-$uiPhone_cv = "";
-$uiUsername_cv = "";
+
 
 if(isset($_POST['uiSubmit']))
 {
+    $Message = '';
+    $uiFname_cv = "";
+    $uiLname_cv = "";
+    $uiPhone_cv = "";
+    $uiUsername_cv = "";
     $uiFname_cv = $_POST['uiFname'];
     $uiLname_cv = $_POST['uiLname'];
     $uiUsername_cv = $_POST['uiUsername'];
@@ -31,9 +32,31 @@ if(isset($_POST['uiSubmit']))
     else
         $Message = $validationMessage;
 }
+
+
+
+if(isset($_POST['uiLogin']))
+{
+    session_start();
+    unset($_SESSION['USER']);
+    require "config/config.php";
+    require "model/user.php";
+    $Message = '';
+
+    $u = new user();
+    $u->setUsername($_POST['uiUser']);
+    $u->setPassword($_POST['uiPass1']);
+
+    if($u->checkUserPass())
+    {
+        $_SESSION['USER'] = serialize($u);
+        header('Location: MessagePage.php');
+    }
+
+    $Message = 'Invalid username or password.';
+}
+
 include "view/login.html";
-
-
 
 
 

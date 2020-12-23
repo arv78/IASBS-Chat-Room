@@ -1,6 +1,5 @@
 <html>
     <head>
-        <title>Personal Website</title>
         <link rel="stylesheet" href="css/main.css" >
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -8,7 +7,7 @@
         <script src="js/jquery/jquery.min.js"></script>
         <script src="js/checkusername.js" ></script>
     </head>
-    
+    <form action="register.php" method="post">
     <div class="login-wrap">
         <div class="login-html">
             
@@ -16,7 +15,6 @@
             <input id="tab-2" type="radio" name="tab" class="sign-up"><label for="tab-2" class="tab">Sign Up</label>
             <div class="login-form">
                 <div class="sign-in-htm">
-                    <form action="index.php" method="post">
                     <div class="group">
                         <label for="uiUser" class="label">Username</label>
                         <input id="uiUser" name="uiUser" type="text" class="input">
@@ -27,13 +25,11 @@
                     </div>
                     <div class="group">
                         <input type="submit" name="uiLogin" class="button" value="Sign In">
-                    </form>
                     </div>
                 </div>
                 
-                
                 <div class="sign-up-htm" >
-                    <form action="register.php" method="post">
+                    
                     <div class="group">
                         <label for="uiFname" class="label">First Name</label>
                         <input id="uiFname" name="uiFname" type="text" class="input" value="<?php echo $uiFname_cv; ?>">
@@ -62,7 +58,7 @@
                         <input type="submit" name="uiSubmit" class="button" value="Sign Up">
                         <p id="uiMessage" style="color: rgb(82, 17, 17);"></p>
                     </div>
-                    </form>
+                    
                     <span><?php echo $Message; ?></span>
                     <div class="hr"></div>
                     
@@ -70,6 +66,7 @@
             </div>
         </div>
     </div>
+    </form>
     
 
 
