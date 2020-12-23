@@ -1,7 +1,7 @@
 <?php
 session_start();
 unset($_SESSION['USER']);
-require "config.php";
+require "config/config.php";
 require "model/user.php";
 
 $Message = '';
