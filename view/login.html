@@ -1,7 +1,7 @@
 <html>
     <head>
         <title>Personal Website</title>
-        <link rel="stylesheet" href="../css/main.css" >
+        <link rel="stylesheet" href="css/main.css" >
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <script src="js/sign_up_form.js"></script>
@@ -30,7 +30,7 @@
                 </div>
                 
                 <div class="sign-up-htm" >
-                    <form action="../register.php" method="post">
+                    <form action="register.php" method="post">
                     <div class="group">
                         <label for="uiFname" class="label">First Name</label>
                         <input id="uiFname" name="uiFname" type="text" class="input" value="<?php echo $uiFname_cv; ?>">
@@ -60,8 +60,9 @@
                         <p id="uiMessage" style="color: rgb(82, 17, 17);"></p>
                     </div>
                     </form>
-                    <div class="hr"></div>
                     <span><?php echo $Message; ?></span>
+                    <div class="hr"></div>
+                    
                 </div>
             </div>
         </div>
