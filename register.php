@@ -39,10 +39,7 @@ if(isset($_POST['uiLogin']))
 {
     session_start();
     unset($_SESSION['USER']);
-    require "config/config.php";
-    require "model/user.php";
-    $Message = '';
-
+    $Message1 = '';
     $u = new user();
     $u->setUsername($_POST['uiUser']);
     $u->setPassword($_POST['uiPass1']);
@@ -53,10 +50,10 @@ if(isset($_POST['uiLogin']))
         header('Location: MessagePage.php');
     }
 
-    $Message = 'Invalid username or password.';
+    $Message1 = 'Invalid username or password.';
 }
 
-include "view/login.html";
+
 
 
 
@@ -81,5 +78,7 @@ function validation()
 
     return $Message;
 }
+
+include "view/login.html";
 
 ?>
