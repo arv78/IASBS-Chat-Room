@@ -3,15 +3,13 @@ session_start();
 unset($_SESSION['USER']);
 require "config.php";
 require "model/user.php";
-include $ShareFolderPath."header.html";
-//include $ShareFolderPath."menu.html";
 
 $Message = '';
 if(isset($_POST['uiLogin']))
 {
     $u = new user();
-    $u->setUsername($_POST['uiUsername']);
-    $u->setPassword($_POST['uiPassword']);
+    $u->setUsername($_POST['uiUser']);
+    $u->setPassword($_POST['uiPass1']);
 
     if($u->checkUserPass())
     {
