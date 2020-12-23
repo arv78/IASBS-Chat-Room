@@ -20,9 +20,6 @@ if(isset($_POST['uiLogin']))
     $Message = 'Invalid username or password.';
 }
 
-
-include $ViewPath."login.html";
-
-include $ShareFolderPath."footer.html";
+include "view/login.html";
 
 ?>
