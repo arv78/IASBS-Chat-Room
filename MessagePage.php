@@ -10,9 +10,10 @@ else
     $WelcomeMessage = 'Welcome '.$u->getName(). ' '.$u->getFamily();
 }
 
-require "config.php";
-include "view/shared/contacts.html";
+require "config/config.php";
 include "view/shared/messeges.html";
+include "view/shared/contacts.html";
+
 
 ?>
 
