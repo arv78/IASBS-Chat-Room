@@ -12,3 +12,4 @@ if(isset($_SESSION['USER'])) {
     $usersList = $tmpMes->see_messages();
     echo json_encode($usersList);
 }
+?>
