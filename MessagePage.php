@@ -9,7 +9,6 @@ else
     $u = unserialize($_SESSION['USER']);
     $WelcomeMessage = 'Welcome '.$u->getName(). ' '.$u->getFamily();
 
-    session_start();
     unset($_SESSION['MESSAGE']);
     $m = new message();
     $m->setto($_POST['contact_username']);
