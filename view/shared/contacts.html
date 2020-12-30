@@ -3,80 +3,40 @@
         <link rel="stylesheet" href="css/contacts.css" >
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="js/angular/angular.js"></script>
+        <script src="js/jquery/jquery.js"></script>
+        <script src="js/userlist.js"></script>
+        <script src="js/bootstrap/ui-bootstrap-tpls-0.11.0.js"></script>
+        <script src="js/jquery/jquery.min.js"></script>
+        <script src="js/jquery/jquery-ui.min.js"></script>
+        <script src="js/angular/angular-resource.js"></script>
     </head>
 
 
-    <div class="inbox_people">
+    <div class="inbox_people" ng-app="UsersListApp">
         <div class="headind_srch">
             <div class="recent_heading">
                 <h4>Recent</h4>
             </div>
             <div class="srch_bar">
                 <div class="stylish-input-group">
-                    <input type="text" class="search-bar"  placeholder="Search" >
+                    <input type="text" class="search-bar"  placeholder="Search" ng-model="searchData">
                     <span class="input-group-addon">
                     <button type="button"> <i class="fa fa-search" aria-hidden="true"></i> </button>
                 </span> </div>
             </div>
-          </div>
-          <div class="inbox_chat">
-            <div class="chat_list active_chat">
+        </div>
+
+        <div class="inbox_chat" ng-controller="UsersListController">
+            <div class="chat_list" ng-repeat="r in lst | filter : searchData">
               <div class="chat_people">
                 <div class="chat_ib">
-                  <h5>Navid <span class="chat_date">Dec 25</span></h5>
-                  <p>All these things will be changed</p>
+                  <h5>{{r.fromuser}} <span class="chat_date">{{r.time}}</span></h5>
+                  <p>{{r.messagessss}}</p>
                 </div>
               </div>
             </div>
-            <div class="chat_list">
-              <div class="chat_people">
-                <div class="chat_ib">
-                  <h5>Navid <span class="chat_date">Dec 25</span></h5>
-                  <p>All these things will be changed</p>
-                </div>
-              </div>
-            </div>
-            <div class="chat_list">
-              <div class="chat_people">
-                <div class="chat_ib">
-                  <h5>Navid <span class="chat_date">Dec 25</span></h5>
-                  <p>All these things will be changed</p>
-                </div>
-              </div>
-            </div>
-            <div class="chat_list">
-              <div class="chat_people">
-                <div class="chat_ib">
-                  <h5>Navid <span class="chat_date">Dec 25</span></h5>
-                  <p>All these things will be changed</p>
-                </div>
-              </div>
-            </div>
-            <div class="chat_list">
-              <div class="chat_people">
-                <div class="chat_ib">
-                  <h5>Navid <span class="chat_date">Dec 25</span></h5>
-                  <p>All these things will be changed</p>
-                </div>
-              </div>
-            </div>
-            <div class="chat_list">
-              <div class="chat_people">
-                <div class="chat_ib">
-                  <h5>Navid <span class="chat_date">Dec 25</span></h5>
-                  <p>All these things will be changed</p>
-                </div>
-              </div>
-            </div>
-            <div class="chat_list">
-              <div class="chat_people">
-                <div class="chat_ib">
-                  <h5>Navid <span class="chat_date">Dec 25</span></h5>
-                  <p>All these things will be changed</p>
-                </div>
-              </div>
-            </div>
-          </div>
+        </div>
        
 
 </html>
