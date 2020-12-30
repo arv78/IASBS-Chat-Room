@@ -9,7 +9,7 @@ if(isset($_SESSION['USER'])) {
     $tmpMes = new message();
     $tmpMes->setto($m->getto());
     $tmpMes->setfrom($u->getUsername());
-    $usersList = $tmpMes->see_messages();
-    echo json_encode($usersList);
+    $mesList = $tmpMes->see_messages();
+    echo json_encode($mesList);
 }
 ?>
