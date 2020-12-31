@@ -31,11 +31,13 @@
             <div class="chat_list" ng-repeat="r in lst | filter : searchData">
               <div class="chat_people">
                 <div class="chat_ib">
-                  <form action="MessagePage.php" method="POST"><button name="contact_username"><h5>{{r.username}}</h5></button></form>  
+                    <form action="MessagePage.php" method="POST">
+                        <input type="submit" name="contact_username_submit" value="{{r.username}}"></input>
+                        <input type="hidden" name="contact_username" value="{{r.username}}"></input>
+                    </form>  
                 </div>
               </div>
             </div>
         </div>
-       
-
+    </div>
 </html>
