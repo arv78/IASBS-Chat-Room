@@ -48,7 +48,7 @@ if(isset($_POST['uiLogin']))
     if($u->checkUserPass())
     {
         $_SESSION['USER'] = serialize($u);
-        header('Location: MessagePage.php');
+        header('Location: ContactPage.php');
     }
 
     $Message1 = 'Invalid username or password.';
