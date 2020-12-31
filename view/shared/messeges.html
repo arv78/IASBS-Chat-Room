@@ -21,7 +21,7 @@
     
     <header class="clearfix">
 
-      <h4>Navid</h4>
+      <h4><?php $m = unserialize($_SESSION['MESSAGE']); echo $m->getto(); ?></h4>
 
       <span class="chat-message-counter">3</span>
 
