@@ -3,6 +3,13 @@
 <head>
 
   <title>Chat</title>
+  <script src="js/angular/angular.js"></script>
+  <script src="js/jquery/jquery.js"></script>
+  <script src="js/userlist.js"></script>
+  <script src="js/bootstrap/ui-bootstrap-tpls-0.11.0.js"></script>
+  <script src="js/jquery/jquery.min.js"></script>
+  <script src="js/jquery/jquery-ui.min.js"></script>
+  <script src="js/angular/angular-resource.js"></script>
   <link rel="stylesheet" href="css/messeges.css" >
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -20,19 +27,19 @@
 
     </header>
 
-    <div class="chat">
+    <div class="chat"  ng-app="MessegesApp">
       
-      <div class="chat-history">
+      <div class="chat-history" ng-controller="MessegesController">
         
-        <div class="chat-message clearfix">
+        <div class="chat-message clearfix" ng-repeat="r in msg">
 
           <div class="chat-message-content clearfix">
             
-            <span class="chat-time">13:35</span>
+            <span class="chat-time">{{r.time}}</span>
 
-            <h5>Navid</h5>
+            <h5>{{r.fromuser}}</h5>
 
-            <p>And when the sun rises, the blue sky shades away.</p>
+            <p>{{r.messages}}</p>
 
           </div> <!-- end chat-message-content -->
 
@@ -40,37 +47,7 @@
 
         <hr>
 
-        <div class="chat-message clearfix">
-
-          <div class="chat-message-content clearfix">
-            
-            <span class="chat-time">13:37</span>
-
-            <h5>Emma Watson</h5>
-
-            <p>Oh dear my dear, I know that</p>
-
-          </div> <!-- end chat-message-content -->
-
-        </div> <!-- end chat-message -->
-
-        <hr>
-
-        <div class="chat-message clearfix">
-
-          <div class="chat-message-content clearfix">
-            
-            <span class="chat-time">13:38</span>
-
-            <h5>Navid</h5>
-
-            <p>OK, bye</p>
-
-          </div> <!-- end chat-message-content -->
-
-        </div> <!-- end chat-message -->
-
-      </div> <!-- end chat-history -->
+              </div> <!-- end chat-history -->
 
       <form action="#" method="post" >
 
