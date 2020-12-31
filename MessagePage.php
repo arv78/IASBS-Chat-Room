@@ -9,12 +9,10 @@ else
     $u = unserialize($_SESSION['USER']);
     $WelcomeMessage = 'Welcome '.$u->getName(). ' '.$u->getFamily();
 
-    if (isset($_POST['contact_username'])) {
-        unset($_SESSION['MESSAGE']);
-        $m = new message();
-        $m->setto($_POST['contact_username']);
-        $_SESSION['MESSAGE'] = serialize($m);
-    }
+    unset($_SESSION['MESSAGE']);
+    $m = new message();
+    $m->setto($_POST['contact_username']);
+    $_SESSION['MESSAGE'] = serialize($m);
 }
 
 require "config/config.php";
