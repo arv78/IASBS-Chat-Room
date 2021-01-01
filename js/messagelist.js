@@ -1,6 +1,7 @@
 var app = angular.module('MessageListApp', ['ui.bootstrap']);
 
 app.controller('MesaageListController', function ($scope, $http) {
+    
     $http.get('getMessageList.php').then(function (d) {
         $scope.lst = d.data;
 

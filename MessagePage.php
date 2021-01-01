@@ -18,8 +18,9 @@ else
 }
 
 require "config/config.php";
-include "view/shared/contacts.html";
+
 include "view/shared/messeges.html";
+//include "view/shared/contacts.html";
 
 
 ?>

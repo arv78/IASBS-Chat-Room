@@ -37,8 +37,8 @@
             
             <span class="chat-time">{{r.time}}</span>
 
-            <h5>{{r.fromuser}} </h5>
-            <p>{{r.messages}}</p>
+            <h5>{{r.from}} </h5>
+            <p>{{r.text}}</p>
             <button><h5>Delete</h5></button>
           </div> <!-- end chat-message-content -->
 
@@ -53,7 +53,6 @@
         <fieldset>
           
           <input type="text" name="text" placeholder="Type here....." autofocus>
-          <input type="hidden">
           <input type="submit" name="uiSend" value="Send">
 
         </fieldset>
