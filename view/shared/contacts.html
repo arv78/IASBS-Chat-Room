@@ -32,6 +32,7 @@
               <div class="chat_people">
                 <div class="chat_ib">
                     <form action="MessagePage.php" method="POST">
+                        <?php $_SESSION['FLAG'] = 1 ?>
                         <input type="submit" name="contact_username_submit" value="{{r.username}}"></input>
                         <input type="hidden" name="contact_username" value="{{r.username}}"></input>
                     </form>  

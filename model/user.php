@@ -155,9 +155,6 @@ class message {
         $this->text = $text;
     }
     function settime($time) {
-        if ($time == "") {
-           $time = date("Y-m-d H:i:s");
-        }
         $this->time = $time;
     }
     function getfrom() {
@@ -189,7 +186,8 @@ class message {
 
     function send_messages() {
         if ($this->userexist()) {
-            $this->settime();
+            $temp_time = date("Y-m-d H:i:s");
+            $this->settime($temp_time);
             $paramTypes = "ssss";
             $Parameters = array($this->from, $this->to, $this->text, $this->time);
             database::ExecuteQuery('AddMessage', $paramTypes, $Parameters);

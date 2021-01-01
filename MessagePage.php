@@ -8,12 +8,13 @@ else
 {
     $u = unserialize($_SESSION['USER']);
     $WelcomeMessage = 'Welcome '.$u->getName(). ' '.$u->getFamily();
-
-    if ($_POST['contact_username_submit']) {
-        unset($_SESSION['MESSAGE']);
-        $m = new message();
-        $m->setto($_POST['contact_username']);
-        $_SESSION['MESSAGE'] = serialize($m);
+    if ($_SESSION['FLAG'] == 1) {
+        if ($_POST['contact_username_submit']) {
+            unset($_SESSION['MESSAGE']);
+            $m = new message();
+            $m->setto($_POST['contact_username']);
+            $_SESSION['MESSAGE'] = serialize($m);
+        }
     }
 }
 
