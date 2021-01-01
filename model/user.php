@@ -221,8 +221,6 @@ class message {
         $paramTypes = "sss";
         $Parameters = array($this->from, $this->to, $this->time);
         database::ExecuteQuery('DeleteMessage',$paramTypes,$Parameters);
-        $update = $this->see_messages();
-        return $update;
     }
 
     function edit_messages($new_text) {

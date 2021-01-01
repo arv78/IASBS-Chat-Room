@@ -39,12 +39,17 @@
 
             <h5>{{r.from}} </h5>
             <p>{{r.text}}</p>
-            <button><h5>Delete</h5></button>
+            <form action="DE_Message.php" method="POST">
+              <input type="hidden" name="M_from" value="{{r.from}}">
+              <input type="hidden" name="M_to" value="{{r.to}}">
+              <input type="hidden" name="M_time" value="{{r.time}}">
+              <input type="submit" name="delete" value="Delete">
+            </form>
           </div> <!-- end chat-message-content -->
 
+          <hr>
         </div> <!-- end chat-message -->
 
-        <hr>
 
               </div> <!-- end chat-history -->
 
