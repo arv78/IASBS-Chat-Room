@@ -127,14 +127,16 @@ class user extends person
         $Parameters = array($this->username);
         $profile = database::ExecuteQuery('GetProfile', $paramTypes, $Parameters);
 
-        $tempUser = new user();
-        $tempUser->setUsername($profile['username']);
-        $tempUser->setName($profile['name']);
-        $tempUser->setFamily($profile['surname']);
-        $tempUser->setTelephone($profile['telephone']);
-        $tempUser->setBio($profile['bio']);
-        
-        $result = $tempUser->jsonSerialize();
+        while ($row = $profile->fetch_array())
+        {
+            $tempUser = new user();
+            $tempUser->setUsername($row['username']);
+            $tempUser->setName($row['name']);
+            $tempUser->setFamily($row['surname']);
+            $tempUser->setTelephone($row['telephone']);
+            $tempUser->setBio($row['bio']);
+            $result = $tempUser->jsonSerialize();
+        }
         return $result;
     }
 }
