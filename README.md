@@ -11,11 +11,11 @@ Simple Chat Room
 
 <h1>Database</h1>
 <p><h3>for this part, we made two tables being user and message where the following pictures represent them respectively:</h3></p>
-<image src="C:/Users/arv78/Desktop/2.png"></image>
+<image src="/view/shared/2.png"></image>
 <br></br>
-<image src="C:/Users/arv78/Desktop/1.png"></image>
+<image src="/view/shared/1.png"></image>
 <h3>above all, we have 8 procedures:</h3>
-<image src="C:/Users/arv78/Desktop/3.png"></image>
+<image src="/view/shared/3.png"></image>
 <h3>where each and all of them are self-explanatory!!</h3>
 
 <h1>View</h1>
